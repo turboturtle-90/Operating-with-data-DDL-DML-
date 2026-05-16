@@ -35,15 +35,37 @@ https://github.com/turboturtle-90/Homework_clustering_and_load_balancing/blob/59
 `Балансировка на 4 уровне по roubdrobin`
 ![1-level4.jpg](https://github.com/turboturtle-90/Homework_clustering_and_load_balancing/blob/7705286e7aea06eb754ecf0cc6f2510aa3f7173f/1-level4.jpg)
 
-`Текст конфига /etc/haproxy/haproxy.cfg в части балансировки roundronib на 4 уровне приведен ниже :`
+`Команды :`
 
-```                                                         
-listen web_tcp
+```
+sudo apt update                                                        
+sudo apt install mysql-server
 
-        bind :1325
-        balance roundrobin
-        server s1 127.0.0.1:8888 check inter 3s
-        server s2 127.0.0.1:9999 check inter 3s
+sudo systemctl start mysql
+sudo systemctl status mysql
+
+sudo mysql
+```
+должно появиться `mysql>`
+Далее создание пользователя с указанием с какого хоста он может подключаться и пароля
+
+```
+CREATE USER 'sys_temp'@'localhost' IDENTIFIED BY 'password';
+```
+Проверка что пользователь создан, вызов списка пользователей:
+```
+SELECT user, host, plugin FROM mysql.user;
+```
+Далее выдача прав - в данном случае всех прав:
+
+```
+GRANT ALL PRIVILEGES ON *.* TO 'sys_temp'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
+Далее выдача прав - в данном случае всех прав:
+
+
 ```
 
 
