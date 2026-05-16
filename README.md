@@ -1,27 +1,33 @@
-# Домашнее задание к занятию "«Работа с данными (DDL/DML)» - `Смирнов Максим`
+# Домашнее задание к занятию «Работа с данными (DDL/DML)» - `Смирнов Максим`
 
 ### Задание 1
 1.1. Поднимите чистый инстанс MySQL версии 8.0+. Можно использовать локальный сервер или контейнер Docker.
 
 `mysql is up and running`
-!1-mysql-status.jpg](https://github.com/turboturtle-90/Operating-with-data-DDL-DML-/blob/ed75bdae6685fe179df4a27b57b5fa5bad726301/1-mysql-status.jpg)
+![1-mysql-status.jpg](https://github.com/turboturtle-90/Operating-with-data-DDL-DML-/blob/ed75bdae6685fe179df4a27b57b5fa5bad726301/1-mysql-status.jpg)
 
 1.2. Создайте учётную запись sys_temp. 
+
 1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
 
 `Пользователи баз`
+
 ![1-user-list.jpg](https://github.com/turboturtle-90/Operating-with-data-DDL-DML-/blob/ed75bdae6685fe179df4a27b57b5fa5bad726301/1-user-list.jpg)
 
 
 1.4. Дайте все права для пользователя sys_temp. 
+
 1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
 
 `Права sys_temp`
 ![1-sys_temp-rights.jpg](https://github.com/turboturtle-90/Operating-with-data-DDL-DML-/blob/ed75bdae6685fe179df4a27b57b5fa5bad726301/1-sys_temp-rights.jpg)
 
 1.6. Переподключитесь к базе данных от имени sys_temp.
+
 1.7. По ссылке https://downloads.mysql.com/docs/sakila-db.zip скачайте дамп базы данных.
+
 1.8. Восстановите дамп в базу данных.
+
 1.9. При работе в IDE сформируйте ER-диаграмму получившейся базы данных. При работе в командной строке используйте команду для получения всех таблиц базы данных. (скриншот)
 
 `Таблицы в базе sakila`
